@@ -187,3 +187,92 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Subpage Back Button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    align-self: flex-start;
+}
+
+.back-button span {
+    margin-right: 5px;
+}
+
+/* Header Adjustments for Subpages */
+.subpage-header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    background: transparent;
+    text-align: left;
+}
+
+.subpage-header h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+}
+/* Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.accordion-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    animation: slideInUp 0.6s ease-out backwards;
+}
+
+.accordion-header {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+.accordion-header:active {
+    background-color: var(--primary-light);
+}
+
+.accordion-icon {
+    transition: transform 0.3s;
+    color: var(--primary-color);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    background-color: #fff;
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 20px;
+    max-height: 1000px; /* arbitrary large value */
+    border-top: 1px solid var(--bg-color);
+}
