@@ -34,9 +34,9 @@ body {
 
 .header-deco-img {
     position: absolute;
-    bottom: 5px;
-    right: 15px;
-    width: 150px;
+    bottom: 0px;
+    right: 10px;
+    width: 180px;
     height: auto;
     opacity: 0.9;
     animation: slideInUp 0.8s ease-out 0.2s both;
@@ -177,9 +177,11 @@ body {
     text-align: center;
     font-size: 0.75rem;
     color: var(--text-light);
-    opacity: 0.6;
-    margin-top: 25px;
+    opacity: 0.2;
+    margin-top: 50px;
     font-weight: 400;
+    display: block;
+    width: 100%;
     animation: fadeIn 1s ease-out 1s both;
 }
 
