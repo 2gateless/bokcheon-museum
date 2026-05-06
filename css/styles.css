@@ -34,9 +34,9 @@ body {
 
 .header-deco-img {
     position: absolute;
-    bottom: 15px;
-    right: 20px;
-    width: 100px;
+    bottom: 5px;
+    right: 15px;
+    width: 150px;
     height: auto;
     opacity: 0.9;
     animation: slideInUp 0.8s ease-out 0.2s both;
@@ -170,6 +170,17 @@ body {
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow);
+}
+
+/* Footer Text */
+.footer-text {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    opacity: 0.6;
+    margin-top: 25px;
+    font-weight: 400;
+    animation: fadeIn 1s ease-out 1s both;
 }
 
 /* Animations */
