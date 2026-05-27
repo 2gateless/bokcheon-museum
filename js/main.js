@@ -4,6 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     boxes.forEach(box => {
         box.addEventListener('click', function(e) {
+            // Handle submenu toggle if exists
+            const submenuId = this.id ? this.id.replace('-btn', '-submenu') : '';
+            const submenu = submenuId ? document.getElementById(submenuId) : null;
+            if (submenu) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                submenu.classList.toggle('active');
+                return;
+            }
+
             const href = this.getAttribute('href');
             if (href && href.startsWith('#')) {
                 e.preventDefault(); // Prevent jump for now
@@ -23,6 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.style.transform = 'scale(0.98)';
                 this.style.backgroundColor = 'var(--primary-light)';
             }
+        });
+    });
+
+    // Submenu Item Click Effects
+    const subItems = document.querySelectorAll('.submenu-item');
+    subItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const itemName = this.textContent.replace('•', '').trim();
+            alert(`'${itemName}' 상세 콘텐츠는 준비 중입니다.`);
         });
     });
 });
