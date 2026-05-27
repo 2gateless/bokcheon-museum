@@ -375,3 +375,32 @@ body {
     max-height: 1000px; /* arbitrary large value */
     border-top: 1px solid var(--bg-color);
 }
+
+/* Mobile responsiveness and layout fixes */
+@media (max-width: 480px) {
+    .title-container .title-line-1,
+    .title-container .title-line-2 {
+        display: block;
+    }
+    
+    .title-container .title-handwritten {
+        font-size: 1.3rem;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .title-container .title-main {
+        font-size: 1.8rem;
+        display: block;
+    }
+    
+    .title-container {
+        padding-right: 120px; /* 우측 이미지와 글자가 겹치지 않도록 우측 여백 확보 */
+    }
+
+    .header-deco-img {
+        width: 120px; /* 이미지 크기를 살짝 줄여서 레이아웃 겹침 방지 */
+        right: 8px;
+    }
+}
+
